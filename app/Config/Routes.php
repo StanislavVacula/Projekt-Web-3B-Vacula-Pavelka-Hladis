@@ -8,3 +8,7 @@ use CodeIgniter\Router\RouteCollection;
 $routes->get('/', 'Home::index');
 $routes->post('/home/getModelsByBrand', 'Home::getModelsByBrand');
 $routes->post('/home/getTypesByModel', 'Home::getTypesByModel');
+$routes->get('login', 'Home::login');
+$routes->get('login', 'Login::index');
+$routes->post('login', 'Login::auth');
+$routes->get('logout', 'Login::logout');

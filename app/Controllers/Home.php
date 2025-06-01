@@ -83,6 +83,11 @@ class Home extends BaseController
 
         return $this->response->setJSON($typy);
     }
+    public function login()
+    {
+        // Zobrazit přihlašovací formulář
+        return view('login');
+    }
 
     
 }
