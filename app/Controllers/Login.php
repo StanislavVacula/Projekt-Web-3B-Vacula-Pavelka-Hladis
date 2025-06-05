@@ -36,7 +36,9 @@ class Login extends BaseController
     public function logout()
     {
         $ionAuth = service('ionAuth');
-        $ionAuth->logout();
-        return redirect()->to('/login');
+        $ionAuth->logout(); // Odhlášení uživatele
+
+        // Přesměrování na přihlašovací stránku
+        return redirect()->to('/login')->with('message', 'Úspěšně jste se odhlásili.');
     }
 }

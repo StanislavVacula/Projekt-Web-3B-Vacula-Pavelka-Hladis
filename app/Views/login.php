@@ -1,4 +1,6 @@
+<?= $this->extend('layout/template'); ?>
 
+<?= $this->section('content'); ?>
 <div class="container mt-5" style="max-width: 400px;">
     <h2 class="mb-4 text-center">Přihlášení</h2>
     <?php if (session()->getFlashdata('message')): ?>
@@ -23,3 +25,5 @@
         <button type="submit" class="btn btn-primary w-100">Přihlásit se</button>
     </form>
 </div>
+
+<?= $this->endSection(); ?>
