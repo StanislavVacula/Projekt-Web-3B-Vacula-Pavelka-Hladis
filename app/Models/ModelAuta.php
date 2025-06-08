@@ -10,9 +10,13 @@ class ModelAuta extends Model
     protected $primaryKey       = 'id'; // Primární klíč
     protected $useAutoIncrement = true; // Automatické inkrementace primárního klíče
     protected $returnType       = 'array'; // Návratový typ dat
-    protected $useSoftDeletes   = false; // Nepoužíváme soft delete
+    protected $useSoftDeletes   = true; // Povolit soft delete
     protected $protectFields    = true; // Ochrana polí proti hromadnému přiřazení
-    protected $allowedFields    = ['model', 'rok_vyroby', 'palivo', 'vykon', 'znacka_auta_id']; // Sloupce tabulky
+    protected $allowedFields    = [
+        'model', 'rok_vyroby', 'palivo', 'vykon', 'znacka_auta_id',
+        'obrazek', 'popis', 'cena', 'typ',
+        'created_at', 'updated_at', 'deleted_at'
+    ]; // Sloupce tabulky
 
     protected bool $allowEmptyInserts = false;
     protected bool $updateOnlyChanged = true;
@@ -21,7 +25,7 @@ class ModelAuta extends Model
     protected array $castHandlers = [];
 
     // Dates
-    protected $useTimestamps = false;
+    protected $useTimestamps = false; // Povolit timestamps
     protected $dateFormat    = 'datetime';
     protected $createdField  = 'created_at';
     protected $updatedField  = 'updated_at';

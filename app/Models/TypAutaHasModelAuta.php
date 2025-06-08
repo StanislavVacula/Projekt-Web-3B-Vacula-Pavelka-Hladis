@@ -12,7 +12,7 @@ class TypAutaHasModelAuta extends Model
     protected $returnType       = 'array';
     protected $useSoftDeletes   = false;
     protected $protectFields    = true;
-    protected $allowedFields = ['typ_auta_id', 'model_auta_id', 'obrazek', 'popis', 'cena'];
+    protected $allowedFields = ['typ_auta_id', 'model_auta_id', 'obrazek', 'popis', 'cena', 'deleted_at'];
 
     protected bool $allowEmptyInserts = false;
     protected bool $updateOnlyChanged = true;
